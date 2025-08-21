@@ -24,10 +24,6 @@ class Nomor1Fragment : Fragment() {
         _binding = FragmentNomor1Binding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        viewModel.text.observe(viewLifecycleOwner){
-            binding.titleFragmentNomor1.text = "Nomor 1"
-        }
-
         // Observasi hasil LiveData
         viewModel.text.observe(viewLifecycleOwner) {
             binding.fragmentNomor1.text = it
